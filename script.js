@@ -1,3 +1,32 @@
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<Weather conditions>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+  // Weather Underground API key
+  var wuAPIKey = "a4c27a2f36ce4003";
+
+  // Here we are building the URL we need to query the database
+  var queryURL = "http://api.wunderground.com/api/" + wuAPIKey + "/conditions/q/CA/San_Francisco.json";
+
+  // AJAX call to the Weather Underground API
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  })
+      
+  // retrieved data "response"
+  .done(function(response) {
+    console.log(queryURL);
+    console.log(response);
+    console.log("Current weather: " + response.current_observation.weather);
+    console.log("Current temperature: " + response.current_observation.temp_f + " degrees(f)")
+
+    $("#conditions").html("Weather conditions: " + response.current_observation.weather);
+    $("#temperature").html("Temperature: " + response.current_observation.temp_f + " degrees(f)");
+  });
+  
+  /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<End weather conditions>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+
+
 var app = {};
 
 var clientId = 'JFYFDNW4QYLUK5AKHG2LLQBJ2OMGE1J24X0NUHJTED0EQT4H'
