@@ -1,4 +1,3 @@
-/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<Weather conditions>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
   // Weather Underground API key
   var wuAPIKey = "a4c27a2f36ce4003";
@@ -23,9 +22,6 @@
     $("#temperature").html("Temperature: " + response.current_observation.temp_f + " degrees(f)");
   });
   
-  /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<End weather conditions>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-
-
 
 var app = {};
 
@@ -53,9 +49,7 @@ app.romantic = function(query) {
 		success: function(data) {
 			app.dataIwant = data.response.venues;
 			app.displayRomantic(app.dataIwant);
-			console.log (data.response);
 		}
-		
 	});
 };
 
