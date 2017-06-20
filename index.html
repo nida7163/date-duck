@@ -1,6 +1,14 @@
 <!doctype html>
 <html lang="en">
+
 <head>
+
+    <meta charset="UTF-8">
+    <link href='http://fonts.googleapis.com/css?family=Bitter:700|Roboto:300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <title>Date Duck</title>
+    <link rel="stylesheet" href="style.css">
+    
   <meta charset="UTF-8">
   <link href='http://fonts.googleapis.com/css?family=Bitter:700|Roboto:300,700' rel='stylesheet' type='text/css'>
   <!-- Latest compiled and minified CSS -->
@@ -10,38 +18,45 @@
   <title>Date Duck</title>
   
 </head>
-<body>
-  <div class="container jumbotron">
-    <header>
-      <h1 id="page-title">Date Duck</h1>
-    </header>
-    
 
-    <div class="vibes-div">
-      <h2>What kind of vibe are you shootin' for?</h2>
-      <ul class="vibes">
-        <li id="fun">Fun</li>
-        <li id="romantic">Romantic</li>
-        <li id="sporty">Sporty</li>
-      </ul>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 id="page-title">Date Duck</h1>
+            <img src="images/duck.png" alt="quack, quack" style="width:200px;height:200px;">
+        </div>
+    </header>
+
+      <br>
+        <br>
+        <div id="weather">
+
+            <p>Today's forecast:</p>
+            <div id="conditions"></div>
+            <div id="temperature"></div>
+        </div>
+
+        <br>
+
+        <div class="container">
+            <h3>What kind of vibe are you shootin' for?</h2>
+            <ul class="vibes">
+              <li id="fun">Fun</li>
+              <li id="romantic">Romantic</li>
+              <li id="sporty">Sporty</li>
+            </ul>
+
+      <br>
+        <br>
 
       <div class="dateOptions clearfix"></div>
-    </div>
 
-    <br>
-    <p>Enter your zip code for today's forecast:</p>
-    <input type="text" value="" id="zip">
-    <input type="submit" value="get weather" id="zip-submit">
-    <div id="weather">
-      <div id="conditions"></div>
-      <div id="temperature"></div>
     </div>
-    <br>
-      
+   
+    
     <div class="foursquareResults clearfix" id="dateNightResults"></div>
-   <!--  <footer>
-      <p> Copyright 2017 Date Duck &mdash; All Rights Reserved.</p>
-    </footer> -->
+
     <footer class="footer">
       <div class="container">
         <p class="text-muted" id="footer-text">Copyright 2017 Date Duck &mdash; All Rights Reserved.</p>
