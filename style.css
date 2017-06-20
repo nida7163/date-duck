@@ -1,0 +1,18 @@
+body{
+	padding: 10px;
+}
+.container{
+	text-align: center;
+}
+footer{
+	border-top: 1px solid gray;
+	text-align: center;
+}
+#footer-text{
+	font-size: 16px;
+	margin-top: 20px;
+}
+li{
+	display: inline-block;
+	margin: 15px;
+}
