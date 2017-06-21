@@ -1,18 +1,12 @@
-$("#search").on("click",function(){
+function setup(){
+	createCanvas (200,200);
+	loadJSON('http://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b1b15e88fa797225412429c1c50c122a1', gotData);
+ 
+}
+function gotData(data){
+	println(data);
+}
 
- //url request to the eventful API(this will access our events)
-  var eventfulAPI ="http://api.eventful.com/json/events/search?q=events&l=atlanta&app_key=hgq8L8N2RrKJmWBr"
-  
-//run ajax to send a request to the eventful server
-     $.ajax({
-      url: eventfulAPI,
-      method: "GET"
-      }) 
-
-
-
-
-
-
-     
--
+function draw (){
+	background (0);
+}
