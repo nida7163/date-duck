@@ -1,5 +1,3 @@
-
-
 	$("#zip-submit").click(function(){
 	  var userZipCode = $("#zip").val();
 	  var wuAPIKey = "a4c27a2f36ce4003";
