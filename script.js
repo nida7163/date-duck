@@ -1,20 +1,4 @@
-<<<<<<< HEAD
-=======
 
- // // Initialize Firebase
- //  var config = {
- //    apiKey: "AIzaSyA8c0Kk-Ei2y4URupPcyNzXCiTJfofE6HY",
- //    authDomain: "date-duck.firebaseapp.com",
- //    databaseURL: "https://date-duck.firebaseio.com",
- //    projectId: "date-duck",
- //    storageBucket: "date-duck.appspot.com",
- //    messagingSenderId: "359049402122"
- //  };
- //  firebase.initializeApp(config);
-
-	// var userZipCode = "";
-
->>>>>>> 75511925622c90700a86306711dcf6dad5a62a91
 	$("#zip-submit").click(function(){
 		event.preventDefault();
 		userZipCode = $("#zip").val();
