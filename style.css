@@ -1,4 +1,53 @@
-<<<<<<< HEAD
+#vibe-selection{
+    display: none;
+}
+
+/*<<<<<<<<<<<<<<<<<<<<<<weather CSS>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+#get-started{
+    width: 175px;
+    background-color: #fffade;
+    margin: 1%;
+    padding: 10px;
+    border-radius: 8px
+}
+#get-started p{
+    font-size: 16px;
+    color: black;
+}
+#zip{
+    color: black;
+    width: 75px;
+    margin: 5px;
+}
+#zip-submit{
+    color: black;
+}
+#weather{
+    background: #fffade;
+    width: 150px;
+    display: none;
+    position: fixed;
+}
+#weather p{
+    color: black;
+}
+.conditions-heading{
+    color: black;
+}
+.conditions-response{
+    color: #4ECDC4;
+}
+.temperature-heading{
+    color: black;
+}
+.temperature-response{
+    color: #4ECDC4;
+}
+
+
+/*<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>*/
+
 body{
 	padding: 10px;
 }
@@ -6,6 +55,7 @@ body{
 	text-align: center;
 }
 footer{
+    margin: 10px 0 0 0;
 	border-top: 1px solid gray;
 	text-align: center;
 }
@@ -268,7 +318,7 @@ p {
     margin: 1%;
     background: #fffade;
     padding: 10px;
-    height: 250px;
+    height: 150px;
     border-radius: 8px
 }
 .dateContainer h2 {
@@ -295,3 +345,13 @@ footer i {
     color: #292F36
 }
 >>>>>>> refs/remotes/origin/master
+
+
+
+
+
+
+
+
+
+
