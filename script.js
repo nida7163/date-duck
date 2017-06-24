@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 
  // // Initialize Firebase
  //  var config = {
@@ -14,7 +13,7 @@
 
 	// var userZipCode = "";
 
->>>>>>> 75511925622c90700a86306711dcf6dad5a62a91
+
 	$("#zip-submit").click(function(){
 		event.preventDefault();
 		userZipCode = $("#zip").val();
@@ -231,36 +230,36 @@
 var romanticDates = [
 	{
 		part1: {
-			title: 'Grab Some Icecream',
+			title: 'Ice Cream',
 			icon: 'images/icecream.png',
-			query: 'icecream'
+			query: 'ice cream'
 		},
 		part2: {
-			title: 'Take a Stroll in the Park',
-			icon: 'images/acorn.png',
+			title: 'Go to the Park',
+			icon: 'images/park.png',
 			query: 'park'
 		},
 		part3: {
-			title: 'Gaze up at the Stars',
-			icon: 'images/stars.png',
-			query: 'observatory'
+			title: 'Sight Seeing',
+			icon: 'images/statueofliberty.png',
+			query: 'landmark'
 		}
 	},
 	{
 		part1: {
-			title: 'Morning Cup of Joe',
+			title: 'Coffee',
 			icon: 'images/coffee.png',
-			query: 'coffee'
+			query: 'coffee shop'
 		},
 		part2: {
-			title: 'Picnic in the Park',
+			title: 'Picnic',
 			icon: 'images/picnic.png',
 			query: 'park'
 		},
 		part3: {
-			title: 'Fly a Kite',
-			icon: 'images/kite.png',
-			query: 'park'
+			title: 'Museum',
+			icon: 'images/museum.png',
+			query: 'museum'
 		}
 	},
 	{
@@ -270,14 +269,14 @@ var romanticDates = [
 			query: 'strawberry picking'
 		},	
 		part2: {
-			title: 'Bird Watching in the Park',
-			icon: 'images/birdy.png',
-			query: 'park'
+			title: 'Dinner',
+			icon: 'images/fancy.png',
+			query: 'Dinner'
 		},
 		part3: {
-			title: 'Martini Lounge',
-			icon: 'images/martini.png',
-			query: 'martini'
+			title: 'Camping',
+			icon: 'images/campfire.png',
+			query: 'camping'
 		}
 	}
 ]
@@ -285,31 +284,31 @@ var romanticDates = [
 var sportyDates = [
 	{
 		part1: {
-			title: 'Shopping for Plaid',
-			icon: 'images/plaid.png',
-			query: 'mall'
+			title: 'Play Tennis',
+			icon: 'images/tennis.png',
+			query: 'tennis'
 		},
 		part2: {
-			title: 'Axe Throwing',
-			icon: 'images/axe.png',
-			query: 'axe throwing'
+			title: 'Hike',
+			icon: 'images/hike.png',
+			query: 'hiking'
 		},
 		part3: {
-			title: 'Burger\'s & Beer',
-			icon: 'images/beer.png',
-			query: 'pub'
+			title: 'Sky Diving',
+			icon: 'images/skydive.png',
+			query: 'sky dive'
 		}
 	},
 	{
 		part1: {
-			title: 'Dinner',
-			icon: 'images/burger.png', 
-			query: 'burgers'
+			title: 'Biking',
+			icon: 'images/bike.png', 
+			query: 'bike path'
 		},
 		part2: {
-			title: 'Ping Pong Challenge',
+			title: 'Ping Pong',
 			icon: 'images/pingpong.png',
-			query: 'ping pong bar'
+			query: 'ping pong'
 		},
 		part3: {
 			title: 'Beers',
@@ -319,36 +318,36 @@ var sportyDates = [
 	},
 	{
 		part1: {
-			title: 'Coffee Date',
-			icon: 'images/coffee2.png',
-			query: 'coffee'
+			title: 'Rock Climbing',
+			icon: 'images/climbing.png',
+			query: 'rock climbing'
 		},
 		part2: {
-			title: 'Bike Tour',
-			icon: 'images/bike.png',
-			query: 'bike path'
+			title: 'Baseball Game',
+			icon: 'images/baseball.png',
+			query: 'baseball'
 		},
 		part3: {
-			title: 'Hit Up The Pub',
-			icon: 'images/burger.png',
-			query: 'pub'
+			title: 'Paintball',
+			icon: 'images/paintball.png',
+			query: 'paintball'
 		}
 	},
 	{
 		part1: {
-			title: 'Bike to Beach',
-			icon: 'images/bike.png',
-			query: 'bike path'
+			title: 'Go Karting',
+			icon: 'images/raceflag.png',
+			query: 'go-karts'
 		},
 		part2: {
-			title: 'Beach Volleyball',
+			title: 'Volleyball',
 			icon: 'images/volleyball.png',
-			query: 'beach volleyball'
+			query: 'volleyball'
 		},
 		part3: {
-			title: 'Icecream',
-			icon: 'images/icecream.png',
-			query: 'icecream'
+			title: 'Golf',
+			icon: 'images/golf.png',
+			query: 'golf'
 		}
 	}
 ]
@@ -356,44 +355,53 @@ var sportyDates = [
 var chillDates = [
 	{
 		part1: {
-			title: 'Title 1',
-			icon: 'http://unsplash.it/200/200'
+			title: 'Visit a Record Store',
+			icon: 'images/vinyl.png',
+			query: 'record store'
 		},
 		part2: {
-			title: 'Title 1',
-			icon: 'http://unsplash.it/200/200'
+			title: 'Art Gallery',
+			icon: 'images/art.png',
+			query: 'art gallery'
 		},
 		part3: {
-			title: 'Title 1',
-			icon: 'http://unsplash.it/200/200'
+			title: 'Drinks',
+			icon: 'images/cocktail.png',
+			query: 'drinks'
 		}
 	},
 	{
 		part1: {
-			title: 'Title 1',
-			icon: 'http://unsplash.it/200/200'
+			title: 'Visit a Museum',
+			icon: 'images/museum.png',
+			query: 'museum'
 		},
 		part2: {
-			title: 'Title 1',
-			icon: 'http://unsplash.it/200/200'
+			title: 'Movies',
+			icon: 'images/popcorn.png',
+			query: 'movie cinema'
 		},
 		part3: {
-			title: 'Title 1',
-			icon: 'http://unsplash.it/200/200'
+			title: 'Fishing',
+			icon: 'images/fishing.png',
+			query: 'lake'
 		}
 	},
 	{
 		part1: {
-			title: 'Title 1',
-			icon: 'http://unsplash.it/200/200'
+			title: 'Grab Coffee',
+			icon: 'images/coffee.png',
+			query: 'coffee'
 		},
 		part2: {
-			title: 'Title 1',
-			icon: 'http://unsplash.it/200/200'
+			title: 'Picnic',
+			icon: 'images/picnic.png',
+			query: 'park'
 		},
 		part3: {
-			title: 'Title 1',
-			icon: 'http://unsplash.it/200/200'
+			title: 'Mini Golf',
+			icon: 'images/minigolf.png',
+			query: 'golf'
 		}
 	}
 ]
@@ -407,20 +415,20 @@ var funDates = [
 		},
 		part2: {
 			title: 'Zoo',
-			icon: 'images/flamingo.png', 
+			icon: 'images/peacock.png', 
 			query: 'zoo'
 		},
 		part3: {
 			title: 'Evening Drinks',
-			icon: 'images/martini.png',
-			query: 'martini'
+			icon: 'images/beer.png',
+			query: 'drinks'
 		}
 	},
 	{
 		part1: {
-			title: 'Cupcake',
-			icon: 'images/cupcake.png',
-			query: 'cupcake'
+			title: 'Trivia',
+			icon: 'images/trivia.png',
+			query: 'trivia'
 		},
 		part2: {
 			title: 'Aquarium',
@@ -428,33 +436,33 @@ var funDates = [
 			query: 'aquarium'
 		},
 		part3: {
-			title: 'Beers',
-			icon: 'images/beer.png',
-			query: 'beer'
+			title: 'Rooftop Bars',
+			icon: 'images/cocktail.png',
+			query: 'rooftop bar'
 		}
 	},
 	{
 		part1: {
-			title: 'Morning Coffee',
-			icon: 'images/coffee2.png',
-			query: 'coffee'
+			title: 'Bowling',
+			icon: 'images/bowling.png',
+			query: 'bowling'
 		},
 		part2: {
-			title: 'Science Centre',
-			icon: 'images/science.png',
-			query: 'science center'
+			title: 'Tour a Brewery',
+			icon: 'images/beer.png',
+			query: 'brewery'
 		},
 		part3: {
-			title: 'Cupcakes',
+			title: 'Grab Dessert',
 			icon: 'images/cupcake.png',
-			query: 'cupcake bakery'
+			query: 'dessert'
 		}
 	},
 	{
 		part1: {
-			title: 'Diner Date',
-			icon: 'images/burger.png',
-			query: 'diner'
+			title: 'Fly a Kite',
+			icon: 'images/kite.png',
+			query: 'park'
 		},
 		part2: {
 			title: 'Movies',
@@ -462,9 +470,9 @@ var funDates = [
 			query: 'movie cinema'
 		},
 		part3: {
-			title: 'Martinis',
-			icon: 'images/martini.png',
-			query: 'martini'
+			title: 'Bar Crawl',
+			icon: 'images/beer.png',
+			query: 'bars'
 		}
 	}
 
@@ -473,44 +481,53 @@ var funDates = [
 var extremeDates = [
 	{
 		part1: {
-			title: 'Title 1',
-			icon: 'http://unsplash.it/200/200'
+			title: 'Sky Dive',
+			icon: 'images/skydive.png',
+			query: 'sky dive'
 		},
-		part2: {
-			title: 'Title 1',
-			icon: 'http://unsplash.it/200/200'
+		part2: {	
+			title: 'Go Karting',
+			icon: 'images/raceflag.png',
+			query: 'go-karts'
 		},
 		part3: {
-			title: 'Title 1',
-			icon: 'http://unsplash.it/200/200'
+			title: 'Water Sking',
+			icon: 'images/waterski.png',
+			query: 'lake'
 		}
 	},
 	{
 		part1: {
-			title: 'Title 1',
-			icon: 'http://unsplash.it/200/200'
+			title: 'Roller Coasters',
+			icon: 'images/rollercoaster.png',
+			query: 'amusement park'
 		},
 		part2: {
-			title: 'Title 1',
-			icon: 'http://unsplash.it/200/200'
+			title: 'Concert',
+			icon: 'images/concert.png',
+			query: 'concert venue'
 		},
 		part3: {
-			title: 'Title 1',
-			icon: 'http://unsplash.it/200/200'
+			title: 'Zip Lining',
+			icon: 'images/zipline.png',
+			query: 'zip line'
 		}
 	},
 	{
 		part1: {
-			title: 'Title 1',
-			icon: 'http://unsplash.it/200/200'
+			title: 'Bungee Jumping',
+			icon: 'images/bungeejumping.png',
+			query: 'bungee jump'
 		},
 		part2: {
-			title: 'Title 1',
-			icon: 'http://unsplash.it/200/200'
+			title: 'Jet Ski',
+			icon: 'images/jeyski.png',
+			query: 'lake'
 		},
 		part3: {
-			title: 'Title 1',
-			icon: 'http://unsplash.it/200/200'
+			title: 'Rock Climb',
+			icon: 'climbing.png',
+			query: 'rock climb'
 		}
 	}
 ]
