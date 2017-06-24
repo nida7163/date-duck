@@ -1,20 +1,4 @@
-<<<<<<< HEAD
-=======
 
- // // Initialize Firebase
- //  var config = {
- //    apiKey: "AIzaSyA8c0Kk-Ei2y4URupPcyNzXCiTJfofE6HY",
- //    authDomain: "date-duck.firebaseapp.com",
- //    databaseURL: "https://date-duck.firebaseio.com",
- //    projectId: "date-duck",
- //    storageBucket: "date-duck.appspot.com",
- //    messagingSenderId: "359049402122"
- //  };
- //  firebase.initializeApp(config);
-
-	// var userZipCode = "";
-
->>>>>>> 75511925622c90700a86306711dcf6dad5a62a91
 	$("#zip-submit").click(function(){
 		event.preventDefault();
 		userZipCode = $("#zip").val();
@@ -40,30 +24,7 @@
 	    $("#conditions").html("<span class='conditions-heading'>Conditions:</span><br><span class='conditions-response'>" + response.current_observation.weather) + "</span>";
 	    $("#temperature").html("<span class='temperature-heading'>Temperature:</span><br><span class='temperature-response'>" + response.current_observation.temp_f + " F</span");
 	  });
-  	
-
-  // Here we are building the URL we need to query the database
-  var queryURL = "http://api.wunderground.com/api/" + wuAPIKey + "/conditions/q/GA/Atlanta.json";
-
-  // AJAX call to the Weather Underground API
-  $.ajax({
-    url: queryURL,
-    method: "GET"
-  })
-
-      
-  // retrieved data "response"
-  .done(function(response) {
-    console.log(queryURL);
-    console.log(response);
-    console.log("Current weather: " + response.current_observation.weather);
-    console.log("Current temperature: " + response.current_observation.temp_f + " degrees(f)")
-
-    $("#conditions").html("Weather conditions: " + response.current_observation.weather);
-    $("#temperature").html("Temperature: " + response.current_observation.temp_f + " degrees(f)");
-  });
-  
-  });
+  	});
 
 
 //FOURSQUARE API HERE
@@ -518,7 +479,6 @@ var extremeDates = [
 
 app.init = function() {
 	app.events();
-	
 };
 
 $(function() {
