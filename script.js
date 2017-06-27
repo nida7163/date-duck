@@ -57,6 +57,10 @@
 					app.displayRomantic(app.dataIwant);
 					console.log("Foursquare API Object:")
 					console.log(data.response)
+					
+					if (data.response.venues.length === 0) {
+						$("#dateNightResults").html("Sorry, this option isn't available in your area yet:(")
+					}
 				}
 			});
 		};
@@ -172,9 +176,14 @@
 				$(".dateOptions").animate({height: "50%", width: "50%"});
 				$("#weather").slideDown("slow");
 
+				if ($("#dateNightResults").val() === "") {
+					$("#dateNightResults").html("<img src='images/loading.gif' alt='Loading' height='75px' width='75px'>");
+				}
 
 				var idea = $(this).data('date');
 				app.romantic(idea);
+
+
 			});
 
 		}
@@ -502,4 +511,8 @@ app.init = function() {
 $(function() {
 	app.init()
 });
+
+window.onerror = function() {
+    $("#dateNightResults").html("Sorry, this option isn't available in your area yet:(");
+};
 
