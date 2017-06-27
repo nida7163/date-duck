@@ -6,7 +6,7 @@
 
 #get-started{
     width: 100%;
-    background-color: #fffade;
+    background-color: #ffffff;
     margin: 10px 0 0 0;
     padding: 10px;
     border-radius: 8px
@@ -24,10 +24,12 @@
     color: black;
 }
 #weather{
-    background: #fffade;
+    background: #ffffff;
     width: 150px;
     display: none;
     position: fixed;
+    border-radius: 8px;
+    font-family: 'Bitter', serif;
 }
 #weather p{
     color: black;
@@ -36,13 +38,13 @@
     color: black;
 }
 .conditions-response{
-    color: #4ECDC4;
+    color: #f3b562;
 }
 .temperature-heading{
     color: black;
 }
 .temperature-response{
-    color: #4ECDC4;
+    color: #f3b562;
 }
 
 
@@ -237,10 +239,10 @@ input::-moz-focus-inner {
     box-sizing: border-box
 }
 body {
-    background: #f3b562;
+    background: #FFFFFF;
     text-align: center;
     font-family: "Source Sans Pro", Arial, sans-serif;
-    color: #fffade
+    color: #ffffff
 }
 .container {
     width: 70%;
@@ -258,7 +260,7 @@ h2 {
     font-weight: normal
 }
 h3 {
-    color: #fffade;
+    color: #292F36;
     font-size: 25px;
     font-family: 'Bitter', serif
 }
@@ -271,10 +273,10 @@ ul.vibes {
     display: inline-block
 }
 ul.vibes li {
-    color: #4ECDC4;
+    color: #FFFFFF;
     list-style-type: none;
     float: left;
-    background: #fffade;
+    background: #4ECDC4;
     padding: 10px 30px;
     margin: 5px;
     border-radius: 7px;
@@ -282,11 +284,11 @@ ul.vibes li {
     font-size: 20px
 }
 ul.vibes li:hover {
-    color: #fffade;
+    color: #ffffff;
     background: #292F36
 }
 p {
-    color: #fffade;
+    color: #292F36;
     font-size: 20px
 }
 .dateOptions {
@@ -305,7 +307,7 @@ p {
     width: 100%;
     border-radius: 50%;
     border: 5px solid #4ECDC4;
-    background: #fffade
+    background: #ffffff
 }
 .dateOptions img:hover {
     border: 5px solid #292F36
@@ -329,7 +331,7 @@ p {
     font-family: 'Bitter', serif
 }
 .dateContainer p {
-    color: #4ECDC4;
+    color: #f3b562;
     font-size: 18px
 }
 footer p {
