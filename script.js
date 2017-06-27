@@ -31,8 +31,8 @@
 
 		var app = {};
 
-		var clientId = 'JFYFDNW4QYLUK5AKHG2LLQBJ2OMGE1J24X0NUHJTED0EQT4H'
-		var clientSecret = 'T5TVNZ4L3X0M3XFXURPGSA040NWBR4MCQG1VU05PWEI1ASZA'
+		var clientId = 'OKYCQXPKJURL2CJ0LLMGOOFWZX2EO32XTJ34MLL5VRACQEVO'
+		var clientSecret = 'CP3TXDPVVOKRJKEO1WAHZRSA4HCKFSI0UK2EW5Q4LDJB20ZM'
 
 		app.romantic = function(query) {
 			$.ajax({
@@ -42,8 +42,8 @@
 				data: {
 					client_id: clientId,
 					client_secret: clientSecret,
-					intent: 'browse',
-					v: 20150513,
+					intent: 'checkin',
+					v: 20161016,
 					format: 'jsonp', 
 					near: userZipCode,
 					query: query, 
@@ -483,12 +483,12 @@ var extremeDates = [
 		},
 		part2: {
 			title: 'Jet Ski',
-			icon: 'images/jeyski.png',
+			icon: 'images/jetski.png',
 			query: 'lake'
 		},
 		part3: {
 			title: 'Rock Climb',
-			icon: 'climbing.png',
+			icon: 'climb.png',
 			query: 'rock climb'
 		}
 	}
