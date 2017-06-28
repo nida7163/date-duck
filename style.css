@@ -29,7 +29,6 @@
     display: none;
     position: fixed;
     border-radius: 8px;
-    font-family: 'Bitter', serif;
 }
 #weather p{
     color: black;
@@ -52,6 +51,7 @@
 
 body{
 	padding: 10px;
+    font-family: 'Roboto', sans-serif;
 }
 .container{
 	text-align: center;
@@ -99,7 +99,6 @@ audio:not([controls]) {
     display: none
 }
 html {
-    font-family: sans-serif;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
@@ -132,7 +131,6 @@ code,
 kbd,
 pre,
 samp {
-    font-family: monospace, serif;
     font-size: 1em
 }
 pre {
@@ -173,7 +171,6 @@ button,
 input,
 select,
 textarea {
-    font-family: inherit;
     font-size: 100%;
     margin: 0
 }
@@ -241,7 +238,6 @@ input::-moz-focus-inner {
 body {
     background: #FFFFFF;
     text-align: center;
-    font-family: "Source Sans Pro", Arial, sans-serif;
     color: #ffffff
 }
 .container {
@@ -252,7 +248,6 @@ h1 {
     color: #292F36;
     font-size: 90px;
     line-height: 80px;
-    font-family: 'Bitter', serif;
     letter-spacing: -3px;
     margin-bottom: 40px
 }
@@ -262,7 +257,7 @@ h2 {
 h3 {
     color: #292F36;
     font-size: 25px;
-    font-family: 'Bitter', serif
+
 }
 ul,
 li {
@@ -280,7 +275,6 @@ ul.vibes li {
     padding: 10px 30px;
     margin: 5px;
     border-radius: 7px;
-    font-family: 'Bitter', serif;
     font-size: 20px
 }
 ul.vibes li:hover {
@@ -328,7 +322,6 @@ p {
 .dateContainer h2 {
     color: #292F36;
     font-size: 20px;
-    font-family: 'Bitter', serif
 }
 .dateContainer p {
     color: #f3b562;
