@@ -1,4 +1,5 @@
 
+	// <<<<<<<<<<<<<<<<<<Weather Underground API >>>>>>>>>>>>>>>>>>>>>
 	$("#zip-submit").click(function(){
 		event.preventDefault();
 		userZipCode = $("#zip").val();
