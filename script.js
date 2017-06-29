@@ -6,7 +6,7 @@
 		$("#get-started").css("display", "none")
 		$("#vibe-selection").show(300);
 
-		var wuAPIKey = "a4c27a2f36ce4003";
+		var wuAPIKey = "a4c27a2f36ce4003"; 
 		var queryURL = "https://api.wunderground.com/api/" + wuAPIKey + "/conditions/q/" + userZipCode + ".json";
 
 		$.ajax({
@@ -14,7 +14,7 @@
 	    	method: "GET"
 	  	})
 	      
-	  // retrieved data "response"
+	  // retrieved data "response" 
 	  .done(function(response) {
 	    console.log(queryURL);
 	    console.log(response);
@@ -27,7 +27,7 @@
   	});
 
 
-//FOURSQUARE API HERE
+//FOURSQUARE API BEGINS HERE
 
 		var app = {};
 
