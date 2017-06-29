@@ -3,6 +3,7 @@
 }
 
 /*<<<<<<<<<<<<<<<<<<<<<<weather CSS>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+    
 
 #get-started{
     width: 100%;
@@ -17,17 +18,22 @@
 }
 #zip{
     color: black;
-    width: 75px;
+    width: 100px;
     margin: 5px;
+    border-radius: 8px
 }
 #zip-submit{
     color: black;
+    color: #FFFFFF;
+    background: #4ECDC4;
+    border-radius: 7px;
+    font-size: 15px;
 }
 #weather{
     background: #ffffff;
     width: 150px;
     display: none;
-    position: fixed;
+    position: absolute;
     border-radius: 8px;
 }
 #weather p{
@@ -50,11 +56,11 @@
 /*<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>*/
 
 body{
-	padding: 10px;
+    padding: 10px;
     font-family: 'Roboto', sans-serif;
 }
 .container{
-	text-align: center;
+    text-align: center;
 }
 
 .footer{
@@ -68,8 +74,8 @@ body{
 }
 
 li{
-	display: inline-block;
-	margin: 15px;
+    display: inline-block;
+    margin: 15px;
 }
 
 
@@ -330,14 +336,3 @@ p {
 footer p {
     font-size: 14px
 }
-
-
-
-
-
-
-
-
-
-
-

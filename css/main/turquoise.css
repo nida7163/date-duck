@@ -236,10 +236,9 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
 }
 .section-heading h2 {
-  font-size: 50px;
+  font-size: 20px;
   font-weight: 300;
   color: #444;
-  text-transform: uppercase;
   position: relative;
   display: block;
   padding-bottom: 20px;
