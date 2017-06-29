@@ -1,4 +1,5 @@
 
+	// <<<<<<<<<<<<<<<<<<Weather Underground API >>>>>>>>>>>>>>>>>>>>>
 	$("#zip-submit").click(function(){
 		event.preventDefault();
 		userZipCode = $("#zip").val();
@@ -71,12 +72,13 @@
 			$.each(dateRomantic, function(item, venue){
 				// var photoSize = '500x500';
 				// var photoPrefix = venue.photos.groups[0].items[0];
-				var $venueTitle = '<h2>' + venue.name + '</h2>';
-				var $venueLocation = '<p>' + venue.location.address + '</p>';
+				var venueTitle = '<h2>' + venue.name + '</h2>';
+				var venueDirections = "https://www.google.com/maps/place/" + venue.location.formattedAddress;
+				var venueLocation = "<a target='_blank' href='" + venueDirections + "'>Get directions</a>";
 				// var $venuePhotos = $('<img>').attr('src', photoPrefix.prefix + photoPrefix.photoSize + photoPrefix.suffix);
-				var $venueContainer = $('<div>').addClass('dateContainer').append($venueTitle, $venueLocation);
+				var venueContainer = $('<div>').addClass('dateContainer flex-container').append(venueTitle, venueLocation);
 
-				$('#dateNightResults').append($venueContainer);
+				$('#dateNightResults').append(venueContainer);
 			});
 
 		}

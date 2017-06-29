@@ -1,7 +1,14 @@
 #vibe-selection{
     display: none;
 }
-
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 150px;
+}
+div.dateContainer p {
+    flex: 1;
+}
 /*<<<<<<<<<<<<<<<<<<<<<<weather CSS>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
     
 
@@ -322,7 +329,7 @@ p {
     margin: 1%;
     background: #fffade;
     padding: 10px;
-    height: 150px;
+    /*height: 150px;*/
     border-radius: 8px
 }
 .dateContainer h2 {
