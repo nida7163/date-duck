@@ -7,7 +7,7 @@
 		$("#vibe-selection").show(300);
 
 		var wuAPIKey = "a4c27a2f36ce4003";
-		var queryURL = "http://api.wunderground.com/api/" + wuAPIKey + "/conditions/q/" + userZipCode + ".json";
+		var queryURL = "https://api.wunderground.com/api/" + wuAPIKey + "/conditions/q/" + userZipCode + ".json";
 
 		$.ajax({
 	    	url: queryURL,
