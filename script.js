@@ -1,4 +1,7 @@
-
+	$(document).ready(function(){
+	    $('#weather').slideDown(400);
+	});
+	
 	// <<<<<<<<<<<<<<<<<<Weather Underground API >>>>>>>>>>>>>>>>>>>>>
 	$("#zip-submit").click(function(){
 		event.preventDefault();
@@ -22,10 +25,13 @@
 	    console.log("Current weather: " + response.current_observation.weather);
 	    console.log("Current temperature: " + response.current_observation.temp_f + " degrees(f)")
 
-	    $("#conditions").html("<span class='conditions-heading'>Conditions:</span><br><span class='conditions-response'>" + response.current_observation.weather) + "</span>";
-	    $("#temperature").html("<span class='temperature-heading'>Temperature:</span><br><span class='temperature-response'>" + response.current_observation.temp_f + " F</span");
+	    $("#conditions").html("<span class='conditions-heading'>Current weather: </span><span class='conditions-response'>" + response.current_observation.weather) + "</span>";
+	    // $("#temperature").html("<span class='temperature-heading'>Temperature:</span><br><span class='temperature-response'>" + response.current_observation.temp_f + " F</span");
 	  });
   	});
+
+	// <<<<<<<<<<<<<<<<<<<<Top Navbar drop down>>>>>>>>>>>>>>>>
+	
 
 
 //FOURSQUARE API BEGINS HERE
@@ -176,7 +182,7 @@
 
 			$('.dateOptions').on('click', '.dateIdeas', function() {
 				$(".dateOptions").animate({height: "50%", width: "50%"});
-				$("#weather").slideDown("slow");
+				
 
 				if ($("#dateNightResults").val() === "") {
 					$("#dateNightResults").html("<img src='images/loading.gif' alt='Loading' height='75px' width='75px'>");

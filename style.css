@@ -37,27 +37,36 @@ div.dateContainer p {
     font-size: 15px;
 }
 #weather{
-    background: #ffffff;
-    width: 150px;
+    color: white;
+    background: #4ECDC4;
     display: none;
-    position: absolute;
-    border-radius: 8px;
+}
+#header-anchor{
+    color: white;
+}
+#conditions{
+    display:inline;
+}
+#temperature{
+    display: inline;
 }
 #weather p{
     color: black;
 }
 .conditions-heading{
-    color: black;
+    color: white;
+    font-family: 'Roboto', sans-serif;
 }
 .conditions-response{
     color: #f3b562;
+    font-family: 'Roboto', sans-serif;
 }
-.temperature-heading{
+/*.temperature-heading{
     color: black;
 }
 .temperature-response{
     color: #f3b562;
-}
+}*/
 
 
 /*<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>*/
