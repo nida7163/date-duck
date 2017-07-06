@@ -1,5 +1,7 @@
 	$(document).ready(function(){
-	    $('#weather').slideDown(400);
+	    setTimeout(function(){
+	    	$('#weather').slideDown(200, "swing");
+	    }, 1200);
 	});
 	
 	// <<<<<<<<<<<<<<<<<<Weather Underground API >>>>>>>>>>>>>>>>>>>>>
@@ -25,16 +27,45 @@
 	    console.log("Current weather: " + response.current_observation.weather);
 	    console.log("Current temperature: " + response.current_observation.temp_f + " degrees(f)")
 
-	    $("#conditions").html("<span class='conditions-heading'>Current weather: </span><span class='conditions-response'>" + response.current_observation.weather) + "</span>";
+	    // $("#conditions").html("<span class='conditions-heading'>Current weather: </span><span class='conditions-response'>" + response.current_observation.weather + ", " + response.current_observation.temp_f + "F</span>");
 	    // $("#temperature").html("<span class='temperature-heading'>Temperature:</span><br><span class='temperature-response'>" + response.current_observation.temp_f + " F</span");
 	  });
   	});
 
-	// <<<<<<<<<<<<<<<<<<<<Top Navbar drop down>>>>>>>>>>>>>>>>
-	
+		// <<<<<<<<<<<<<Initialize Firebase>>>>>>>>>>>
+		var config = {
+		    apiKey: "AIzaSyA8c0Kk-Ei2y4URupPcyNzXCiTJfofE6HY",
+		    authDomain: "date-duck.firebaseapp.com",
+		    databaseURL: "https://date-duck.firebaseio.com",
+		    projectId: "date-duck",
+		    storageBucket: "date-duck.appspot.com",
+		    messagingSenderId: "359049402122"
+		};
+		firebase.initializeApp(config);
+
+	  	// variable that references firebase
+  		var database = firebase.database();
+
+		// script to be run when the page loads
+	  	database.ref().on("value", function(snapshot) {
+
+		  	var sv = snapshot.val();
+		      
+		    var svArr = Object.keys(sv);
+
+		  	for (var i = 0; i < svArr.length; i++) {
+		  		var venueKey = svArr[i]
+		  		var savedVenues = sv[venueKey]
+
+		  		console.log(savedVenues.selectedVenue)
+		  		$("#conditions").append("<span class='added-event'>" + savedVenues.selectedVenue + "</span>");
+		  	}		    	
+		});
 
 
-//FOURSQUARE API BEGINS HERE
+
+
+		//FOURSQUARE API BEGINS HERE
 
 		var app = {};
 
@@ -81,13 +112,34 @@
 				var venueTitle = '<h2>' + venue.name + '</h2>';
 				var venueDirections = "https://www.google.com/maps/place/" + venue.location.formattedAddress;
 				var venueLocation = "<a target='_blank' href='" + venueDirections + "'>Get directions</a>";
+				var addButton = "<button class='add-button" + item + "'>Add</button>"
 				// var $venuePhotos = $('<img>').attr('src', photoPrefix.prefix + photoPrefix.photoSize + photoPrefix.suffix);
-				var venueContainer = $('<div>').addClass('dateContainer flex-container').append(venueTitle, venueLocation);
+				var venueContainer = $('<div>').addClass('dateContainer flex-container').append(venueTitle, venueLocation, addButton);
 
 				$('#dateNightResults').append(venueContainer);
+
+				//<<<<<< when addButton is clicked, add that date option to the bar at the top of the page, and add it to firebase
+				$(".add-button" + item).click(function(){
+					event.preventDefault();
+
+					$("#conditions").empty();
+
+					// $("#conditions").append("<span class='added-event'>" + venue.name + "</span>");
+
+					var selectedVenue = venue.name;
+		
+					database.ref().push({
+				        selectedVenue: selectedVenue,
+			   		});
+				});
 			});
 
+			
+
 		}
+
+		
+
 
 
 		// var $venuePhotos = $('<img>').attr('src', item.venue.photos.groups[0].items[0].prefix + photoSize + item.venue.photos.groups[0].items[0].suffix);
@@ -109,8 +161,9 @@
 
 			$('.vibes li').on('click', function() {
 				
-				$("#duck-icon").animate({height: "40px", width: "40px"});
-				$("#page-title").hide(300);
+				$("#duck-icon").hide(100, "swing");
+				$("#page-title").hide(100, "swing");
+				$("#conditions").show(100, "swing");
 
 
 				var getDates = $(this).text();
@@ -182,7 +235,6 @@
 
 			$('.dateOptions').on('click', '.dateIdeas', function() {
 				$(".dateOptions").animate({height: "50%", width: "50%"});
-				
 
 				if ($("#dateNightResults").val() === "") {
 					$("#dateNightResults").html("<img src='images/loading.gif' alt='Loading' height='75px' width='75px'>");

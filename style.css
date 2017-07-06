@@ -11,7 +11,6 @@ div.dateContainer p {
 }
 /*<<<<<<<<<<<<<<<<<<<<<<weather CSS>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
     
-
 #get-started{
     width: 100%;
     background-color: #ffffff;
@@ -40,12 +39,14 @@ div.dateContainer p {
     color: white;
     background: #4ECDC4;
     display: none;
+    position: fixed;
 }
 #header-anchor{
     color: white;
 }
 #conditions{
-    display:inline;
+    padding: 20px 0;
+    font-family: 'Roboto', sans-serif;
 }
 #temperature{
     display: inline;
@@ -60,6 +61,16 @@ div.dateContainer p {
 .conditions-response{
     color: #f3b562;
     font-family: 'Roboto', sans-serif;
+}
+.add-button{
+    border-color: #4ECDC4;
+    background-color: white;
+    color:#4ECDC4;
+}
+.added-event{
+    border: 2px solid white;
+    padding: 10px 10px;
+    margin: 10px;
 }
 /*.temperature-heading{
     color: black;
@@ -338,7 +349,7 @@ p {
     margin: 1%;
     background: #fffade;
     padding: 10px;
-    height: 180px;
+    height: 220px;
     border-radius: 8px
 }
 .dateContainer h2 {
