@@ -60,7 +60,7 @@
 					console.log(data.response)
 					
 					if (data.response.venues.length === 0) {
-						$("#dateNightResults").html("Sorry, this option isn't available in your area yet:(")
+						$("#dateNightResults").html("Sorry, this option isn't available in your area. :( Better luck nest time.")
 					}
 				}
 			});
@@ -515,6 +515,6 @@ $(function() {
 });
 
 window.onerror = function() {
-    $("#dateNightResults").html("Sorry, this option isn't available in your area yet:(");
+    $("#dateNightResults").html("Sorry, this option isn't available in your area yet:( Better luck nest time.");
 };
 
