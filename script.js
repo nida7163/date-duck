@@ -555,7 +555,7 @@ var extremeDates = [
 		},
 		part3: {
 			title: 'Rock Climb',
-			icon: 'climb.png',
+			icon: 'climbing.png',
 			query: 'rock climb'
 		}
 	}
