@@ -348,7 +348,7 @@ var sportyDates = [
 	{
 		part1: {
 			title: 'Rock Climbing',
-			icon: 'images/climbing.png',
+			icon: 'images/rock.png',
 			query: 'rock climbing'
 		},
 		part2: {
