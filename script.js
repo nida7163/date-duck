@@ -347,9 +347,10 @@ var sportyDates = [
 	},
 	{
 		part1: {
-			title: 'Rock Climbing',
-			icon: 'images/climb.png',
-			query: 'rock climbing'
+			title: 'Golf',
+			icon: 'images/golf.png',
+			query: 'golf'
+		
 		},
 		part2: {
 			title: 'Baseball Game',
