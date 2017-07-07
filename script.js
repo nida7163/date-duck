@@ -571,6 +571,6 @@ $(function() {
 });
 
 window.onerror = function() {
-    $("#dateNightResults").html("Sorry, this option isn't available in your area yet:( Better luck nest time.");
+    $("#dateNightResults").html("Sorry, this option isn't available in your area. :( Better luck nest time.");
 };
 
