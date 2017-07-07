@@ -554,10 +554,10 @@ var extremeDates = [
 			query: 'lake'
 		},
 		part3: {
-			title: 'Rock Climb',
-			icon: 'climb.png',
-			query: 'rock climb'
-		}
+			title: 'Concert',
+			icon: 'images/concert.png',
+			query: 'concert venue'
+		},
 	}
 ]
 
