@@ -27,40 +27,40 @@
 	    console.log("Current weather: " + response.current_observation.weather);
 	    console.log("Current temperature: " + response.current_observation.temp_f + " degrees(f)")
 
-	    // $("#conditions").html("<span class='conditions-heading'>Current weather: </span><span class='conditions-response'>" + response.current_observation.weather + ", " + response.current_observation.temp_f + "F</span>");
+	    $("#conditions").html("<span class='conditions-heading'>Current weather: </span><span class='conditions-response'>" + response.current_observation.weather + ", " + response.current_observation.temp_f + "F</span>");
 	    // $("#temperature").html("<span class='temperature-heading'>Temperature:</span><br><span class='temperature-response'>" + response.current_observation.temp_f + " F</span");
 	  });
   	});
 
-		// <<<<<<<<<<<<<Initialize Firebase>>>>>>>>>>>
-		var config = {
-		    apiKey: "AIzaSyA8c0Kk-Ei2y4URupPcyNzXCiTJfofE6HY",
-		    authDomain: "date-duck.firebaseapp.com",
-		    databaseURL: "https://date-duck.firebaseio.com",
-		    projectId: "date-duck",
-		    storageBucket: "date-duck.appspot.com",
-		    messagingSenderId: "359049402122"
-		};
-		firebase.initializeApp(config);
+		// // <<<<<<<<<<<<<Initialize Firebase>>>>>>>>>>>
+		// var config = {
+		//     apiKey: "AIzaSyA8c0Kk-Ei2y4URupPcyNzXCiTJfofE6HY",
+		//     authDomain: "date-duck.firebaseapp.com",
+		//     databaseURL: "https://date-duck.firebaseio.com",
+		//     projectId: "date-duck",
+		//     storageBucket: "date-duck.appspot.com",
+		//     messagingSenderId: "359049402122"
+		// };
+		// firebase.initializeApp(config);
 
-	  	// variable that references firebase
-  		var database = firebase.database();
+	 //  	// variable that references firebase
+  // 		var database = firebase.database();
 
-		// script to be run when the page loads
-	  	database.ref().on("value", function(snapshot) {
+		// // script to be run when the page loads
+	 //  	database.ref().on("value", function(snapshot) {
 
-		  	var sv = snapshot.val();
+		//   	var sv = snapshot.val();
 		      
-		    var svArr = Object.keys(sv);
+		//     var svArr = Object.keys(sv);
 
-		  	for (var i = 0; i < svArr.length; i++) {
-		  		var venueKey = svArr[i]
-		  		var savedVenues = sv[venueKey]
+		//   	for (var i = 0; i < svArr.length; i++) {
+		//   		var venueKey = svArr[i]
+		//   		var savedVenues = sv[venueKey]
 
-		  		console.log(savedVenues.selectedVenue)
-		  		$("#conditions").append("<span class='added-event'>" + savedVenues.selectedVenue + "</span>");
-		  	}		    	
-		});
+		//   		console.log(savedVenues.selectedVenue)
+		//   		$("#conditions").append("<span class='added-event'>" + savedVenues.selectedVenue + "</span>");
+		//   	}		    	
+		// });
 
 
 
@@ -112,29 +112,27 @@
 				var venueTitle = '<h2>' + venue.name + '</h2>';
 				var venueDirections = "https://www.google.com/maps/place/" + venue.location.formattedAddress;
 				var venueLocation = "<a target='_blank' href='" + venueDirections + "'>Get directions</a>";
-				var addButton = "<button class='add-button" + item + "'>Add</button>"
+				// var addButton = "<button class='add-button" + item + "'>Add</button>"
 				// var $venuePhotos = $('<img>').attr('src', photoPrefix.prefix + photoPrefix.photoSize + photoPrefix.suffix);
-				var venueContainer = $('<div>').addClass('dateContainer flex-container').append(venueTitle, venueLocation, addButton);
+				var venueContainer = $('<div>').addClass('dateContainer flex-container').append(venueTitle, venueLocation,);
 
 				$('#dateNightResults').append(venueContainer);
 
-				//<<<<<< when addButton is clicked, add that date option to the bar at the top of the page, and add it to firebase
-				$(".add-button" + item).click(function(){
-					event.preventDefault();
+				// //<<<<<< when addButton is clicked, add that date option to the bar at the top of the page, and add it to firebase
+				// $(".add-button" + item).click(function(){
+				// 	event.preventDefault();
 
-					$("#conditions").empty();
+				// 	$("#conditions").empty();
 
-					// $("#conditions").append("<span class='added-event'>" + venue.name + "</span>");
+				// 	// $("#conditions").append("<span class='added-event'>" + venue.name + "</span>");
 
-					var selectedVenue = venue.name;
+				// 	var selectedVenue = venue.name;
 		
-					database.ref().push({
-				        selectedVenue: selectedVenue,
-			   		});
-				});
+				// 	database.ref().push({
+				//         selectedVenue: selectedVenue,
+			 //   		});
+				// });
 			});
-
-			
 
 		}
 
