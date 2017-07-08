@@ -28,44 +28,14 @@
 	    console.log("Current temperature: " + response.current_observation.temp_f + " degrees(f)")
 
 	    $("#conditions").html("<span class='conditions-heading'>Current weather: </span><span class='conditions-response'>" + response.current_observation.weather + ", " + response.current_observation.temp_f + "F</span>");
-	    // $("#temperature").html("<span class='temperature-heading'>Temperature:</span><br><span class='temperature-response'>" + response.current_observation.temp_f + " F</span");
+
 	  });
   	});
 
-		// // <<<<<<<<<<<<<Initialize Firebase>>>>>>>>>>>
-		// var config = {
-		//     apiKey: "AIzaSyA8c0Kk-Ei2y4URupPcyNzXCiTJfofE6HY",
-		//     authDomain: "date-duck.firebaseapp.com",
-		//     databaseURL: "https://date-duck.firebaseio.com",
-		//     projectId: "date-duck",
-		//     storageBucket: "date-duck.appspot.com",
-		//     messagingSenderId: "359049402122"
-		// };
-		// firebase.initializeApp(config);
-
-	 //  	// variable that references firebase
-  // 		var database = firebase.database();
-
-		// // script to be run when the page loads
-	 //  	database.ref().on("value", function(snapshot) {
-
-		//   	var sv = snapshot.val();
-		      
-		//     var svArr = Object.keys(sv);
-
-		//   	for (var i = 0; i < svArr.length; i++) {
-		//   		var venueKey = svArr[i]
-		//   		var savedVenues = sv[venueKey]
-
-		//   		console.log(savedVenues.selectedVenue)
-		//   		$("#conditions").append("<span class='added-event'>" + savedVenues.selectedVenue + "</span>");
-		//   	}		    	
-		// });
 
 
 
 
-		//FOURSQUARE API BEGINS HERE
 
 		var app = {};
 
@@ -104,34 +74,22 @@
 		};
 
 
+
+
+
+
+
 		app.displayRomantic = function(dateRomantic) {
 			$('#dateNightResults').empty();
 			$.each(dateRomantic, function(item, venue){
-				// var photoSize = '500x500';
-				// var photoPrefix = venue.photos.groups[0].items[0];
 				var venueTitle = '<h2>' + venue.name + '</h2>';
 				var venueDirections = "https://www.google.com/maps/place/" + venue.location.formattedAddress;
 				var venueLocation = "<a target='_blank' href='" + venueDirections + "'>Get directions</a>";
-				// var addButton = "<button class='add-button" + item + "'>Add</button>"
-				// var $venuePhotos = $('<img>').attr('src', photoPrefix.prefix + photoPrefix.photoSize + photoPrefix.suffix);
 				var venueContainer = $('<div>').addClass('dateContainer flex-container').append(venueTitle, venueLocation,);
 
 				$('#dateNightResults').append(venueContainer);
 
-				// //<<<<<< when addButton is clicked, add that date option to the bar at the top of the page, and add it to firebase
-				// $(".add-button" + item).click(function(){
-				// 	event.preventDefault();
-
-				// 	$("#conditions").empty();
-
-				// 	// $("#conditions").append("<span class='added-event'>" + venue.name + "</span>");
-
-				// 	var selectedVenue = venue.name;
-		
-				// 	database.ref().push({
-				//         selectedVenue: selectedVenue,
-			 //   		});
-				// });
+				
 			});
 
 		}
@@ -140,20 +98,6 @@
 
 
 
-		// var $venuePhotos = $('<img>').attr('src', item.venue.photos.groups[0].items[0].prefix + photoSize + item.venue.photos.groups[0].items[0].suffix);
-
-		//OR
-
-		//venue photo
-				// var photoPrefix = places[i].venue.photos.groups[0].items[0];
-				// var photo = $('<img>').attr('src',photoPrefix.prefix + photoPrefix.height + photoPrefix.suffix);
-
-
-
-			// Using dateType need to get a random number and select a random element from date type
-			// With random date we need to display part 1, part 2, part 3
-			// With those displayed, we then need to allow user to click on an icon(part) and make a call to Foursquare api to get information
-			// With this information we need to display it on the page
 
 		app.events = function(){
 
@@ -347,9 +291,10 @@ var sportyDates = [
 	},
 	{
 		part1: {
-			title: 'Rock Climbing',
-			icon: 'images/climbing.png',
-			query: 'rock climbing'
+			title: 'Golf',
+			icon: 'images/golf.png',
+			query: 'golf'
+		
 		},
 		part2: {
 			title: 'Baseball Game',
@@ -554,10 +499,10 @@ var extremeDates = [
 			query: 'lake'
 		},
 		part3: {
-			title: 'Rock Climb',
-			icon: 'climb.png',
-			query: 'rock climb'
-		}
+			title: 'Concert',
+			icon: 'images/concert.png',
+			query: 'concert venue'
+		},
 	}
 ]
 
@@ -571,6 +516,6 @@ $(function() {
 });
 
 window.onerror = function() {
-    $("#dateNightResults").html("Sorry, this option isn't available in your area yet:( Better luck nest time.");
+    $("#dateNightResults").html("Sorry, this option isn't available in your area. :( Better luck nest time.");
 };
 
