@@ -27,7 +27,7 @@
 	    console.log("Current weather: " + response.current_observation.weather);
 	    console.log("Current temperature: " + response.current_observation.temp_f + " degrees(f)")
 
-	    $("#conditions").html("<span class='conditions-heading'>Current weather: </span><span class='conditions-response'>" + response.current_observation.weather + ", " + response.current_observation.temp_f + "F</span>");
+	    $("#conditions").html("<span class='conditions-heading'>  Current weather: </span><span class='conditions-response'>" + response.current_observation.weather + ", " + response.current_observation.temp_f + "F</span>");
 
 	  });
   	});
