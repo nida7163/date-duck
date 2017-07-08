@@ -45,8 +45,9 @@ div.dateContainer p {
     color: white;
 }
 #conditions{
+    text-align: left;
     padding: 20px 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Source Sans Pro", Arial, sans-serif;
 }
 #temperature{
     display: inline;
@@ -56,11 +57,11 @@ div.dateContainer p {
 }
 .conditions-heading{
     color: white;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Source Sans Pro", Arial, sans-serif;
 }
 .conditions-response{
     color: #f3b562;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Source Sans Pro", Arial, sans-serif;
 }
 .add-button{
     border-color: #4ECDC4;
