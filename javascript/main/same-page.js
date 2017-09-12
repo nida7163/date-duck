@@ -12,10 +12,5 @@ $(document).ready(function(){
 		$('#test').hide();
 	});
 
-
-
-
-
-
 // ====================== END OF DOC.READY	======================
 });
