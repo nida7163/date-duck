@@ -12,7 +12,7 @@
 <img src="https://media.giphy.com/media/et5UgwwoWvY9W/giphy.gif" height="300"/>
 
 ### Link
-https://date-duck.herokuapp.com/index.html
+https://date-duck-app.herokuapp.com/index.html
 
 ### Authors
 Andrew Coleman, Nida Chaudhry, Shamsur Mir
